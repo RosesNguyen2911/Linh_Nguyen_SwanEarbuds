@@ -1,0 +1,209 @@
+@use "../abstracts" as *;
+
+.reflection-section {
+  background: $color-white;
+  color: $color-purple-dark;
+  font-family: $font-primary;
+  padding: 60px 0;
+
+  /* Title */
+  .reflection-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  /* Color options */
+  .reflection-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+
+    .color-btn {
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: $color-purple-dark;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      .color-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid $color-purple-dark;
+
+        &.white {
+          background: $color-white;
+        }
+
+        &.black {
+          background: $color-black;
+        }
+      }
+
+      &.active .color-circle {
+        box-shadow: 0 0 0 3px rgba($color-purple-dark, 0.3);
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Image + Description */
+  .reflection-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 20px 20px;
+
+
+    .reflection-image {
+      img {
+        width: 100%;
+        max-width: 480px;
+        border-radius: 8px;
+        border: 1px solid $color-purple-dark;
+        background: #dcdcdc;
+        margin: 0 auto;
+      }
+    }
+
+    .reflection-description {
+      max-width: 90%;
+      margin: 0 auto;
+
+      p {
+        font-size: 1rem;
+        color: $color-black;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .buy-btn {
+        background: #3b82f6;
+        color: $color-white;
+        border: none;
+        border-radius: 40px;
+        padding: 13px 32px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+
+        &:hover {
+          background: #2563eb;
+          box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+        }
+      }
+    }
+  }
+
+  /* ===== Tablet ≥768px ===== */
+  @media (min-width: 768px) {
+    padding: 80px 0;
+
+    .reflection-title {
+      text-align: left;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      margin-left: 40px;
+    }
+
+    .reflection-options {
+      justify-content: flex-start;
+      margin-left: 2rem;
+    }
+
+    .reflection-content {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      gap: 3rem;
+
+      .reflection-image {
+        flex: 1 1 45%;
+        max-width: 420px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+
+      .reflection-image {
+        img {
+          margin-left: 20px;
+        }
+      }
+
+      .reflection-description {
+        flex: 1 1 55%;
+        max-width: 520px;
+
+        p {
+          font-size: 1.05rem;
+          margin-bottom: 1.8rem;
+        }
+      }
+    }
+  }
+
+  /* ===== Desktop ≥1200px ===== */
+  @media (min-width: 1200px) {
+    padding: 100px 0;
+
+    .reflection-title {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .reflection-content {
+      gap: 5rem;
+      align-items: center;
+      justify-content: center;
+
+      .reflection-image img {
+        max-width: 700px;
+      }
+
+      .reflection-image {
+        img {
+          margin-left: 20px;
+        }
+      }
+
+      .reflection-description {
+        max-width: 600px;
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+        }
+
+        .buy-btn {
+          font-size: 1.05rem;
+          padding: 14px 36px;
+        }
+      }
+    }
+  }
+}

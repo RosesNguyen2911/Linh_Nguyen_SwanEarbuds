@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+/* Hero */
+.hero-section {
+  background: $color-gradient;
+  color: $color-white;
+  text-align: center;
+  padding: 150px 20px 40px;
+  height: 800px;
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    white-space: normal;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 16px 0 28px;
+    opacity: 0.9;
+  }
+
+  .hero-image {
+    margin: 40px auto 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+      margin-top: -80px;
+    }
+  }
+
+  /* Buttons */
+  .hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .btn {
+      background: #3b82f6; // same blue tone as reflection section
+      color: $color-white;
+      border: none;
+      border-radius: 40px;
+      padding: 13px 32px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+
+      &:hover {
+        background: #2563eb; // deeper blue on hover
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+      }
+    }
+  }
+}
+
+/* ===== Tablet ≥768px ===== */
+@media screen and (min-width: 768px) {
+  .hero-section {
+    text-align: left;
+    padding: 160px 60px 50px;
+    height: 620px;
+
+    h1 {
+      font-size: 3.3rem;
+      margin-top: 40px;
+      display: inline-block;
+      max-width: 12ch;
+      white-space: normal;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin: 20px 0 40px;
+    }
+
+    .hero-cta {
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    .hero-image img {
+      width: 670px;
+      height: auto;
+      margin-top: -110px;
+    }
+  }
+}
+
+/* ===== Desktop ≥1200px ===== */
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding: 120px 100px;
+    height: 720px;
+
+    h1 {
+      font-size: 4rem;
+      margin-top: 80px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 25px 0 50px;
+    }
+
+    .hero-image img {
+      width: 900px;
+      height: auto;
+      margin-top: -120px;
+    }
+  }
+}

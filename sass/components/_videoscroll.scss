@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+/* Video Section */
+.video-section {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: $color-gradient;
+  text-align: center;
+
+  .video-container {
+    width: 100%;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color-black, 0.4);
+
+    .video-placeholder {
+      border: 2px dashed rgba($color-white, 0.5);
+      color: $color-white;
+      font-size: 1rem;
+      padding: 60px 20px;
+      border-radius: 12px;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+        color: $color-button;
+        border-color: $color-button;
+      }
+    }
+  }
+}
+
+/* ===== Tablet ≥768px ===== */
+@media screen and (min-width: 768px) {
+  .video-section .video-container {
+    height: 75vh;
+
+    .video-placeholder {
+      font-size: 1.2rem;
+      padding: 100px 40px;
+    }
+  }
+}
+
+/* ===== Desktop ≥1200px ===== */
+@media screen and (min-width: 1200px) {
+  .video-section .video-container {
+    height: 100vh; // full height viewport
+    .video-placeholder {
+      font-size: 1.5rem;
+      padding: 120px 60px;
+    }
+  }
+}

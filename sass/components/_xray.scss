@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+/* =========================
+   XRAY SECTION
+========================= */
+.xray-section {
+  background: $color-white;
+  color: $color-purple-dark;
+  font-family: $font-primary;
+  padding: 60px 0;
+
+  .xray-text {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .xray-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .xray-subtitle {
+      font-size: 1rem;
+      color: rgba($color-purple-dark, 0.8);
+    }
+  }
+
+  .xray-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .xray-placeholder {
+      width: 90%;
+      max-width: 800px;
+      height: 400px;
+      border: 1px solid rgba($color-purple-dark, 0.4);
+      border-radius: 4px;
+      background: transparent;
+    }
+  }
+}
+
+/* =========================
+   RESPONSIVE CONTROL
+========================= */
+
+/* Tablet (>=768px) */
+@media (min-width: 768px) {
+  .xray-section {
+    .xray-text {
+      text-align: center;
+      .xray-title {
+        font-size: 2.4rem;
+      }
+      .xray-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    .xray-placeholder {
+      height: 450px;
+      max-width: 900px;
+    }
+  }
+}
+
+/* Desktop (>=1200px) */
+@media (min-width: 1200px) {
+  .xray-section {
+    .xray-placeholder {
+      height: 500px;
+      max-width: 1000px;
+    }
+  }
+}
