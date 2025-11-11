@@ -1,0 +1,28 @@
+$color-black: #2b2b2b;
+$color-white: #FFFFFF;
+$color-button: #0988FF;
+$color-purple-dark: #573A4C;
+$color-gradient: linear-gradient(
+  180deg,
+  #000000 0%,
+  #573A4C 38%,
+  #998390 71%,
+  #FFE7E7 100%
+);
+
+$color-gradient-2: linear-gradient(
+  180deg,
+  mix(#000000, #FFE7E7, 20%) 0%,   
+  mix(#573A4C, #FFE7E7, 35%) 38%,  
+  mix(#998390, #FFE7E7, 50%) 71%, 
+  #FFF5F5 100%
+);
+
+
+// Font Family
+$font-primary: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+  
+

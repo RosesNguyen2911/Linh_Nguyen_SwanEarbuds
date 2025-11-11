@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+/* =========================
+   BENEFITS SECTION
+   ========================= */
+.benefits-section {
+  background: $color-white;
+  color: $color-purple-dark;
+  font-family: $font-primary;
+  padding: 60px 0;
+  border-top: 1px solid rgba($color-purple-dark, 0.1);
+  border-bottom: 1px solid rgba($color-purple-dark, 0.1);
+
+
+  /* Item container (for grid behavior) */
+  .benefit-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* The actual card */
+  .benefit-card {
+    background: rgba($color-purple-dark, 0.04);
+    border: 1.5px solid rgba($color-purple-dark, 0.2);
+    border-radius: 16px;
+    padding: 2rem 1.2rem;
+    width: 100%;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    i {
+      font-size: 2rem;
+      color: $color-purple-dark;
+      transition: all 0.3s ease;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: $color-purple-dark;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      background: $color-purple-dark;
+      color: $color-white;
+      box-shadow: 0 6px 20px rgba($color-purple-dark, 0.3);
+      transform: translateY(-4px);
+
+      i {
+        color: $color-white;
+        transform: scale(1.15);
+      }
+
+      p {
+        color: $color-white;
+      }
+    }
+  }
+
+  /* ===== Tablet ≥768px ===== */
+  @media (min-width: 768px) {
+    .benefits-row {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .benefit-card {
+      max-width: 260px;
+      padding: 2rem 1.5rem;
+
+      i {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+      }
+    }
+  }
+
+  /* ===== Desktop ≥1200px ===== */
+  @media (min-width: 1200px) {
+    .benefits-row {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+    }
+
+    .benefit-card {
+      max-width: 270px;
+      padding: 2.2rem 1.6rem;
+
+      i {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

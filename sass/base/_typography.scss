@@ -1,2 +1,15 @@
-@forward 'reset';
-@forward 'typography';
+@use "../abstracts" as *;
+
+/* Global Base Styles */
+body {
+  font-family: $font-primary;
+
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+}
+
