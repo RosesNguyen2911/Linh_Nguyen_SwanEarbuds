@@ -9,17 +9,50 @@
 This project is a **promotional website** for the conceptual product **Swan Earbuds**, designed to highlight the harmony between elegant design and advanced technology.  
 It demonstrates responsive web design, animation, and 3D interactivity through the **model-viewer API**.  
 
-### Current and Planned Sections  
+## ✨ Completed Sections  
 
-- 🎯 **Responsive Hero Section** introducing the brand.  
-- 💬 **Mission & Vision** area explaining design philosophy.  
-- 🎞️ **Video Scrolling Section** *(to be developed in the future).*  
-- 🧊 **3D Model-Viewer Section** with a 360° interactive experience.  
-- 🧱 **Product Feature Cards** showcasing the earbuds’ strengths.  
-- ⚡ **Animated GSAP Hotspots** revealing product features dynamically.  
-- 🧩 **Model ↔ X-Ray Sliding Section** *(to be developed in the future).*  
-- 🎨 **Color Reflection Section** to switch between “Swan Pearl” and “Swan Noir” variants.  
-- 🪶 **Benefits Footer** with company and contact details.  
+### ✔ Hero Section  
+- Animated hero title, subtitle, CTAs, and hero image using **GSAP**  
+- Gradient brand background inspired by the **Swan aesthetic**  
+- Responsive layout for all devices  
+
+### ✔ Mission & Vision  
+- Scroll-triggered text animation describing design philosophy  
+- Clean two-column layout with brand-inspired tone  
+
+### ✔ Scroll-Driven 3D Sequence  
+- Canvas-based **image sequence animation** for exploded earbud view  
+- Fully smooth playback on **desktop & tablet**  
+- Automatically switches to a **static fallback frame** on mobile for performance  
+
+### ✔ X-Ray Slider Section  
+- Exterior ↔ X-Ray **interactive reveal slider**  
+- Custom thumb button using an SVG icon  
+- Responsive scaling and bordered frame consistent with brand colors  
+
+### ✔ Reflection Section (Color Swap)  
+- Toggle between **Swan Pearl** and **Swan Noir** variants  
+- Smooth crossfade animation and synchronized text updates  
+- Dynamic visual reflection to match each colorway  
+
+### ✔ 3D Model Viewer (AR Ready)  
+- Fully interactive **360° rotatable earbuds**  
+- AR support using `<model-viewer>`  
+- Five animated hotspots with GSAP-powered info cards  
+
+### ✔ Product Features  
+- Three feature cards animated on scroll  
+- Icons, titles, and descriptive text matching brand tone  
+- Adaptive layout with hover/scroll enhancements  
+
+### ✔ Benefits Section  
+- Four benefits showcased with fade-in GSAP animations  
+- Clean iconography and fast readability  
+
+### ✔ Footer Section  
+- Multi-column responsive footer layout  
+- Contact info, navigation links, and socials  
+- GSAP reveal animations on scroll  
 
 ---
 
@@ -55,7 +88,7 @@ It demonstrates responsive web design, animation, and 3D interactivity through t
 
 ---
 ## 📂 Folder Structure  
-> Organized using modular SCSS architecture and component-based design.
+> Organized using modular SCSS architecture, GSAP animations, and image-sequence workflow.
 
 - **LINH_NGUYEN_SWAN_EARBUDS/**
   - `index.html`
@@ -63,10 +96,12 @@ It demonstrates responsive web design, animation, and 3D interactivity through t
   - `LICENSE`
   - `.gitignore`
   - `.gitkeep`
+
   - **css/**
     - `grid.css`
     - `main.css`
     - `main.css.map`
+
   - **images/**
     - `earbud_feature_1.png`
     - `earbud_feature_2.png`
@@ -75,10 +110,19 @@ It demonstrates responsive web design, animation, and 3D interactivity through t
     - `swan_pearl.png`
     - `swan_noir.png`
     - `swan_text_logo.svg`
+    - (images sequences)**
+      - `explode_0000.webp`
+      - `explode_0001.webp`
+      - `...`
+      - `explode_0539.webp`  
+      *(540-frame image sequence for scroll-driven animation)*
+
   - **js/**
     - `main.js`
+
   - **model/**
     - `Linh_Nguyen_Model Viewer Earbuds.gltf`
+
   - **sass/**
     - **abstracts/**
       - `_fonts.scss`
@@ -105,22 +149,20 @@ It demonstrates responsive web design, animation, and 3D interactivity through t
       - `_animations.scss`
       - `_index.scss`
     - `main.scss`
-  - **video/**
-    - *(planned future video scroll section)*
----
+
 
 ## 🚀 How to Run  
 
 1. Clone or download this repository.  
 2. Open `index.html` in your browser.  
-3. Interact with the **3D model**, hover over **hotspots**, and switch **earbud colors**.
+3. Interact with the **Scrolling Image Sequence Animation**, **3D model**, hover over **Hotspots**, and switch **Earbud Colors**.
 
 ---
 ## 🪶 Credits  
 
 **Design & Development:** Linh Nguyen  
-**Instructor:** Marco De Luca  
-**Course:** MMED-3040 – Authoring III  
+**Instructor:** Marco De Luca & Justin Brunner  
+**Course:** MMED-3039 & MMED-3040  
 **College:** Fanshawe College  
 **Semester:** Level 3 – Fall 2025  
 
