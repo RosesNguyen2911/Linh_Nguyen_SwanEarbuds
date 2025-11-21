@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   background-color: #2b2b2b;
   color: #FFFFFF;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -217,16 +216,18 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, #000000 0%, #573A4C 38%, #998390 71%, #FFE7E7 100%);
   color: #FFFFFF;
   text-align: center;
-  padding: 150px 20px 40px;
+  padding: 100px 20px 40px;
   height: 800px;
+  /* Select styling by class instead of h1/h2 */
   /* Buttons */
 }
-.hero-section h1 {
-  font-size: 2.8rem;
+.hero-section .hero-title {
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
   white-space: normal;
+  display: block;
 }
 .hero-section p {
   font-size: 1.1rem;
@@ -277,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 160px 60px 50px;
     height: 620px;
   }
-  .hero-section h1 {
+  .hero-section .hero-title {
     font-size: 3.3rem;
     margin-top: 40px;
     display: inline-block;
@@ -304,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 120px 100px;
     height: 720px;
   }
-  .hero-section h1 {
+  .hero-section .hero-title {
     font-size: 4rem;
     margin-top: 80px;
   }
@@ -570,7 +571,7 @@ canvas {
   text-align: left;
   padding: 40px 30px;
 }
-.mission-section h2 {
+.mission-section .mission-title {
   font-size: 2rem;
   font-weight: 700;
   color: #573A4C;
@@ -578,6 +579,7 @@ canvas {
   margin-bottom: 20px;
   text-transform: capitalize;
   margin-top: -5px;
+  display: block;
 }
 .mission-section p {
   font-size: 1rem;
@@ -594,7 +596,7 @@ canvas {
   .mission-section .mission-heading {
     text-align: left;
   }
-  .mission-section .mission-heading h2 {
+  .mission-section .mission-heading .mission-title {
     font-size: 2.5rem;
     line-height: 1.3;
     white-space: normal;
@@ -608,7 +610,7 @@ canvas {
   .mission-section {
     padding: 50px 50px;
   }
-  .mission-section .mission-heading h2 {
+  .mission-section .mission-heading .mission-title {
     font-size: 2.8rem;
     line-height: 1.25;
   }
@@ -617,60 +619,37 @@ canvas {
     line-height: 1.9;
   }
 }
-/* Video Section */
-.video-section {
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, #000000 0%, #573A4C 38%, #998390 71%, #FFE7E7 100%);
-  text-align: center;
-}
-.video-section .video-container {
+/* Scroll Animation Section */
+#scroll-animation {
   width: 100%;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(43, 43, 43, 0.4);
+  position: relative;
+  overflow: hidden; /* prevent layout shifting */
+  margin: 0 auto;
+  /* Static fallback image for mobile */
+  /* Hide canvas on mobile */
 }
-.video-section .video-container .video-placeholder {
-  border: 2px dashed rgba(255, 255, 255, 0.5);
-  color: #FFFFFF;
-  font-size: 1rem;
-  padding: 60px 20px;
-  border-radius: 12px;
-  opacity: 0.8;
-  transition: all 0.3s ease;
+#scroll-animation #scroll-static {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.video-section .video-container .video-placeholder:hover {
-  opacity: 1;
-  color: #0988FF;
-  border-color: #0988FF;
+#scroll-animation #explode-view {
+  display: none;
 }
 
-/* ===== Tablet ≥768px ===== */
-@media screen and (min-width: 768px) {
-  .video-section .video-container {
-    height: 75vh;
+/* Tablet ≥ 768px — enable canvas animation */
+@media (min-width: 768px) {
+  #scroll-animation #scroll-static {
+    display: none; /* hide mobile fallback */
   }
-  .video-section .video-container .video-placeholder {
-    font-size: 1.2rem;
-    padding: 100px 40px;
-  }
-}
-/* ===== Desktop ≥1200px ===== */
-@media screen and (min-width: 1200px) {
-  .video-section .video-container {
-    height: 100vh;
-  }
-  .video-section .video-container .video-placeholder {
-    font-size: 1.5rem;
-    padding: 120px 60px;
+  #scroll-animation #explode-view {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
-/* =========================
-   XRAY SECTION
-========================= */
 .xray-section {
   background: #FFFFFF;
   color: #573A4C;
@@ -682,52 +661,103 @@ canvas {
   margin-bottom: 2rem;
 }
 .xray-section .xray-text .xray-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 .xray-section .xray-text .xray-subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: rgba(87, 58, 76, 0.8);
 }
-.xray-section .xray-frame {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.xray-section .xray-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.xray-section .xray-frame .xray-placeholder {
-  width: 90%;
-  max-width: 800px;
-  height: 400px;
-  border: 1px solid rgba(87, 58, 76, 0.4);
-  border-radius: 4px;
+
+#xray {
+  position: relative;
+  aspect-ratio: 16/10;
+  background-image: url("../images/Nguyen_L_EarbudsRender.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  border: 3px solid #573A4C;
+  overflow: hidden;
+}
+
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16/10;
+  background-image: url("../images/Nguyen_L_X-Ray.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+}
+#divisor::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 110%;
+  background-color: #FFFFFF;
+  border: 2.5px solid #573A4C;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 20px);
   background: transparent;
 }
 
-/* =========================
-   RESPONSIVE CONTROL
-========================= */
-/* Tablet (>=768px) */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 0;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF url("../images/right_left_icon.svg") center/60% no-repeat;
+  border-radius: 50%;
+  border: 2px solid #573A4C;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(87, 58, 76, 0.3);
+}
+
 @media (min-width: 768px) {
-  .xray-section .xray-text {
-    text-align: center;
+  #divisor::after {
+    width: 10px;
+    border-width: 3px;
   }
-  .xray-section .xray-text .xray-title {
-    font-size: 2.4rem;
-  }
-  .xray-section .xray-text .xray-subtitle {
-    font-size: 1.1rem;
-  }
-  .xray-section .xray-placeholder {
-    height: 450px;
-    max-width: 900px;
+  input[type=range]::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    background-size: 70%;
   }
 }
-/* Desktop (>=1200px) */
 @media (min-width: 1200px) {
-  .xray-section .xray-placeholder {
-    height: 500px;
-    max-width: 1000px;
+  #divisor::after {
+    width: 12px;
+    border-width: 4px;
+  }
+}
+/* Mobile: disable slider */
+@media (max-width: 767px) {
+  #slider {
+    pointer-events: none;
+    opacity: 0;
+  }
+  #divisor {
+    width: 50% !important;
   }
 }
 .reflection-section {
@@ -794,7 +824,7 @@ canvas {
   width: 100%;
   max-width: 480px;
   border-radius: 8px;
-  border: 1px solid #573A4C;
+  border: 1.5px solid #573A4C;
   background: #dcdcdc;
   margin: 0 auto;
 }
@@ -874,10 +904,6 @@ canvas {
   .reflection-section {
     padding: 100px 0;
   }
-  .reflection-section .reflection-title {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
-  }
   .reflection-section .reflection-content {
     gap: 5rem;
     align-items: center;
@@ -907,18 +933,19 @@ canvas {
   background: linear-gradient(180deg, #FFFFFF 0%, #f6f4f5 100%);
   padding: 80px 20px;
   text-align: center;
-  overflow-x: hidden; /* ✅ Ngăn thanh kéo ngang */
-  box-sizing: border-box; /* ✅ Đảm bảo padding không làm tràn */
-  /* Section title */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* Section title (changed from h2 → .section-title) */
   /* Feature card */
 }
-.features-section h2 {
+.features-section .section-title {
   font-size: 2rem;
   font-weight: 700;
   color: #573A4C;
   line-height: 1.3;
   margin-bottom: 40px;
   text-transform: capitalize;
+  display: block;
 }
 .features-section .feature-card {
   background: linear-gradient(180deg, rgba(87, 58, 76, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
@@ -929,7 +956,7 @@ canvas {
   box-shadow: 0 6px 16px rgba(43, 43, 43, 0.1);
   transition: all 0.3s ease;
   box-sizing: border-box;
-  /* Image (no flex) */
+  /* Title inside feature-card (use class, not h3) */
 }
 .features-section .feature-card:hover {
   transform: translateY(-6px);
@@ -937,25 +964,26 @@ canvas {
   border-color: rgba(87, 58, 76, 0.4);
 }
 .features-section .feature-card div {
-  text-align: center; /* ✅ Canh giữa nội dung */
+  text-align: center;
   margin-bottom: 24px;
-  overflow: hidden; /* ✅ tránh ảnh tràn */
+  overflow: hidden;
 }
 .features-section .feature-card div img {
-  display: block; /* ✅ để margin auto có hiệu lực */
+  display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 360px; /* ✅ kiểm soát kích thước ảnh */
+  max-width: 360px;
   height: auto;
   border-radius: 20px;
   filter: drop-shadow(0 3px 6px rgba(43, 43, 43, 0.25));
   object-fit: contain;
 }
-.features-section .feature-card h3 {
+.features-section .feature-card .feature-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: #573A4C;
   margin-bottom: 14px;
+  display: block;
 }
 .features-section .feature-card p {
   font-size: 1rem;
@@ -970,21 +998,18 @@ canvas {
 @media screen and (min-width: 768px) {
   .features-section {
     padding: 60px 40px;
-    overflow-x: hidden;
   }
-  .features-section h2 {
+  .features-section .section-title {
     font-size: 2.2rem;
     margin-bottom: 60px;
   }
   .features-section .feature-card {
     padding: 40px 25px;
-    height: 100%;
-    max-width: 100%; /* ✅ không vượt viewport */
   }
   .features-section .feature-card div img {
-    max-width: 280px; /* ✅ ảnh phù hợp hơn cho tablet */
+    max-width: 280px;
   }
-  .features-section .feature-card h3 {
+  .features-section .feature-card .feature-title {
     font-size: 1.4rem;
   }
   .features-section .feature-card p {
@@ -995,15 +1020,13 @@ canvas {
 @media screen and (min-width: 1200px) {
   .features-section {
     padding: 100px 80px;
-    overflow-x: hidden;
   }
-  .features-section h2 {
+  .features-section .section-title {
     font-size: 2.4rem;
     margin-bottom: 70px;
   }
   .features-section .feature-card {
     padding: 50px 35px;
-    max-width: 100%;
   }
   .features-section .feature-card:hover {
     transform: translateY(-10px) scale(1.03);
@@ -1012,7 +1035,7 @@ canvas {
     max-width: 320px;
     border-radius: 24px;
   }
-  .features-section .feature-card h3 {
+  .features-section .feature-card .feature-title {
     font-size: 1.6rem;
   }
   .features-section .feature-card p {
@@ -1027,7 +1050,7 @@ canvas {
   background: #FFFFFF;
   color: #573A4C;
   font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  padding: 60px 0;
+  padding: 50px 20px;
   border-top: 1px solid rgba(87, 58, 76, 0.1);
   border-bottom: 1px solid rgba(87, 58, 76, 0.1);
   /* Item container (for grid behavior) */
