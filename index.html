@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <h1 class="hidden">Welcome To Swan Earbuds Website</h1>
+
   <!-- HEADER -->
   <header id="header" class="grid-con">
     <div class="header-logo col-span-2 m-col-span-2 l-col-span-2">
@@ -23,11 +25,12 @@
     </div>
 
     <input type="checkbox" id="menu-toggle" hidden>
-    <label for="menu-toggle" class="header-hamburger col-start-4 col-end-5">
+
+    <label for="menu-toggle" class="header-hamburger col-start-4 col-end-5" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
     </label>
 
-    <nav class="header-nav m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
+    <nav class="header-nav m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" aria-label="Main Navigation">
       <ul>
         <li><a href="index.html">Products</a></li>
         <li><a href="index.html">About</a></li>
@@ -41,325 +44,400 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <!-- HERO SECTION -->
-    <section id="hero" class="grid-con hero-section">
-      <div class="hero-content col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
-        <h1>SWAN SYMPHONY</h1>
-        <p>Where Sound Becomes Art.</p>
 
-        <div class="hero-cta">
-          <a href="#" class="btn btn-learn">Learn More</a>
-          <a href="#" class="btn btn-buy">Buy</a>
-        </div>
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="grid-con hero-section">
+
+    <h2 class="hidden">Hero Section</h2>
+
+    <div class="hero-content col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
+      <h3 class="hero-title">SWAN SYMPHONY</h3>
+      <p>Where Sound Becomes Art.</p>
+
+      <div class="hero-cta">
+        <a href="#" class="btn btn-learn">Learn More</a>
+        <a href="#" class="btn btn-buy">Buy</a>
       </div>
+    </div>
 
-      <figure class="hero-image col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
-        <img src="images/earbuds_hero.svg" alt="Swan Symphony earbuds in Pearl and Noir editions">
-      </figure>
-    </section>
+    <figure class="hero-image col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
+      <img src="images/earbuds_hero.svg" alt="Swan Symphony earbuds in Pearl and Noir editions">
+    </figure>
 
-    <!-- MISSION SECTION -->
-    <section id="mission" class="grid-con mission-section">
-      <div class="mission-heading col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
-        <h2>Our Mission And Vision</h2>
-      </div>
+  </section>
 
-      <div class="mission-content col-span-full m-col-start-5 m-col-end-13 l-col-start-5 l-col-end-13">
-        <p>
-          At Swan Symphony, our mission is to transform the way people experience sound —
-          merging advanced technology with timeless beauty. We believe that true innovation
-          lies not only in performance but also in how it makes people feel.
-          Each detail, from the curve of the earbuds to the clarity of every note,
-          is designed to embody grace and precision.<br><br>
-          Our vision is to create audio devices that transcend function —
-          products that inspire confidence, calmness, and connection.
-          Just like the elegance of a swan gliding over still water,
-          Swan Symphony strives to deliver sound that flows effortlessly,
-          reflecting purity, balance, and emotion in every moment of listening.
-        </p>
-      </div>
-    </section>
+<!-- MISSION SECTION -->
+<section id="mission" class="grid-con mission-section">
 
-    <!-- VIDEO SCROLL SECTION -->
-    <section id="video-scroll" class="video-section">
-      <h2 class="hidden">Product Showcase Video</h2>
-      <div class="video-container">
-        <div class="video-placeholder">
-          <p>Full-width video scroll section (coming soon)</p>
-        </div>
-      </div>
-    </section>
+  <div class="mission-heading col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
+    <h2 class="mission-title">Our Mission And Vision</h2>
+  </div>
 
-    <!-- FEATURES SECTION -->
-    <section id="features" class="grid-con features-section">
-      <div class="col-span-full">
-        <h2>Product Features</h2>
-      </div>
+  <article class="mission-content col-span-full m-col-start-5 m-col-end-13 l-col-start-5 l-col-end-13">
+    <h3 class="hidden">Mission and Vision Details</h3>
+    <p>
+      At Swan Symphony, our mission is to transform the way people experience sound —
+      merging advanced technology with timeless beauty. We believe that true innovation
+      lies not only in performance but also in how it makes people feel.
+      Each detail, from the curve of the earbuds to the clarity of every note,
+      is designed to embody grace and precision.<br><br>
+      Our vision is to create audio devices that transcend function —
+      products that inspire confidence, calmness, and connection.
+      Just like the elegance of a swan gliding over still water,
+      Swan Symphony strives to deliver sound that flows effortlessly,
+      reflecting purity, balance, and emotion in every moment of listening.
+    </p>
+  </article>
 
-      <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
-        <h3 class="hidden">Extended Battery Life</h3>
-        <div><img src="images/earbud_feature_1.png" alt="Long Battery Life with Charging Case"></div>
-        <h3>Extended Battery Life</h3>
-        <p>Enjoy up to 48 hours of total playback with the Swan charging case. Designed for long-lasting performance, it keeps your earbuds powered wherever your day takes you.</p>
-      </article>
+</section>
 
-      <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
-        <h3 class="hidden">Feather-Light Design</h3>
-        <div><img src="images/earbud_feature_2.png" alt="Feather Light Earbuds"></div>
-        <h3>Feather-Light Design</h3>
-        <p>Weighing only 3.2 grams each, Swan Earbuds redefine comfort with a barely-there fit that feels as light as air — perfect for long listening sessions.</p>
-      </article>
 
-      <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
-        <h3 class="hidden">Exquisite Inner Craft</h3>
-        <div><img src="images/earbud_feature_3.png" alt="Precision Internal Design"></div>
-        <h3>Exquisite Inner Craft</h3>
-        <p>Every element inside Swan Symphony is built with precision engineering — from balanced drivers to protective shielding — blending beauty and performance in perfect harmony.</p>
-      </article>
-    </section>
+<!-- SCROLLING IMAGE SEQUENCE SECTION -->
+<section id="scroll-animation">
+  <h2 class="hidden">Swan Earbuds Scrolling</h2>
+  <img id="scroll-static" src="images/explode_0539.webp" alt="Swan Earbuds">
+  <canvas id="explode-view"></canvas>
+</section>
 
-    <!-- MODEL VIEWER SECTION -->
-    <section id="swan-model" class="model-section">
-      <div class="grid-con">
-        <div class="col-span-full m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-5 model-text">
-          <h2 class="model-title">See the Beauty.<br>Touch the Detail.</h2>
-          <p class="model-subtitle">Immerse yourself in a 360° view of <br>Swan Symphony’s refined craftsmanship.</p>
-        </div>
+<!-- FEATURES SECTION -->
+<section id="features" class="grid-con features-section">
 
-        <div class="col-span-full m-col-start-6 m-col-end-13 l-col-start-5 l-col-end-13 model-viewer-wrap">
-          <model-viewer
-            id="model"
-            src="model/Linh_Nguyen_Model Viewer Earbuds.gltf"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            camera-controls
-            tone-mapping="neutral"
-            poster="poster.webp"
-            shadow-intensity="1.33"
-            exposure="0.6"
-            shadow-softness="1"
-            disable-zoom
-            background-color="transparent"
-          >
-            <button class="Hotspot" slot="hotspot-1" data-index="1" data-position="-0.5575753113815958m 1.0161517884057922m -0.9951428595948597m" data-normal="0.1879963803221925m -0.043268934919907756m -0.9812161638786076m" data-visibility-attribute="visible">
-              <span class="HotspotAnnotation" id="hotspot-1"></span>
-            </button>
+  <div class="col-span-full">
+    <h2 class="section-title">Product Features</h2>
+  </div>
 
-            <button class="Hotspot" slot="hotspot-2" data-index="2" data-position="-0.42345212551579475m 1.1244540382541495m -1.5913624807454219m" data-normal="-1.2246468525851679e-16m 0m -1m" data-visibility-attribute="visible">
-              <span class="HotspotAnnotation" id="hotspot-2"></span>
-            </button>
+  <!-- Feature 1 -->
+  <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
+    <div>
+      <img src="images/earbud_feature_1.png" alt="Long Battery Life with Charging Case">
+    </div>
+    <h3 class="feature-title">Extended Battery Life</h3>
+    <p>
+      Enjoy up to 48 hours of total playback with the Swan charging case. Designed for long-lasting
+      performance, it keeps your earbuds powered throughout your day — from morning routines to nighttime unwinding.
+    </p>
+  </article>
 
-            <button class="Hotspot" slot="hotspot-3" data-index="3" data-position="-0.7417289706155215m 1.2122182979491893m -1.4998734975586314m" data-normal="-0.8975809779003605m 0.44084962074547934m 0m" data-visibility-attribute="visible">
-              <span class="HotspotAnnotation" id="hotspot-3"></span>
-            </button>
+  <!-- Feature 2 -->
+  <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
+    <div>
+      <img src="images/earbud_feature_2.png" alt="Feather Light Earbuds">
+    </div>
+    <h3 class="feature-title">Feather-Light Design</h3>
+    <p>
+      Weighing only 3.2 grams each, Swan Earbuds redefine comfort with a barely-there fit.
+      Soft ergonomic curves make them ideal for long listening sessions, workouts, and everyday moments.
+    </p>
+  </article>
 
-            <button class="Hotspot" slot="hotspot-4" data-index="4" data-position="-0.30m 0.7769131379532437m -1.5484884871226732m" data-normal="0.9762547903832386m -0.21662530846292055m 0.00024492268853269663m" data-visibility-attribute="visible">
-              <span class="HotspotAnnotation" id="hotspot-4"></span>
-            </button>
+  <!-- Feature 3 -->
+  <article class="feature-card col-span-full m-col-span-4 l-col-span-4">
+    <div>
+      <img src="images/earbud_feature_3.png" alt="Precision Internal Design">
+    </div>
+    <h3 class="feature-title">Exquisite Inner Craft</h3>
+    <p>
+      Every element inside Swan Symphony is crafted with precision engineering — from its balanced drivers 
+      to internal acoustic shielding — combining high-fidelity performance with refined craftsmanship 
+      to deliver a truly immersive audio experience.
+    </p>
+  </article>
+</section>
 
-            <button class="Hotspot" slot="hotspot-5" data-index="5" data-position="-0.2808326519185689m 0.28m -1.444731822809986m" data-normal="0.07260661522172351m -0.09097291073749751m 0.9932030048977861m" data-visibility-attribute="visible">
-              <span class="HotspotAnnotation" id="hotspot-5"></span>
-            </button>
-          </model-viewer>
 
-          <div class="hotspot-card-list">
-            <div class="hotspot-card" data-index="1">
-              <i class="fa-solid fa-ear-listen"></i>
-              <div class="card-content">
-                <h3>All-Day Comfort</h3>
-                <p>Soft rubber tips adapt to you — sealing in sound, keeping fatigue out.</p>
-              </div>
-            </div>
 
-            <div class="hotspot-card" data-index="2">
-              <i class="fa-solid fa-feather-pointed"></i>
-              <div class="card-content">
-                <h3>Signature Grace</h3>
-                <p>The Swan emblem — a mark of balance, purity, and effortless design.</p>
-              </div>
-            </div>
+   <!-- MODEL VIEWER SECTION -->
+<section id="swan-model" class="model-section">
 
-            <div class="hotspot-card" data-index="3">
-              <i class="fa-solid fa-bolt"></i>
-              <div class="card-content">
-                <h3>Instant Control</h3>
-                <p>Every press responds instantly — your music, your rhythm, your way.</p>
-              </div>
-            </div>
+  <h2 class="hidden">3D Model Viewer Section</h2>
 
-            <div class="hotspot-card" data-index="4">
-              <i class="fa-brands fa-bluetooth-b"></i>
-              <div class="card-content">
-                <h3>Pure Connection</h3>
-                <p>Engineered antenna ring ensures stable Bluetooth and crystal-clear sound.</p>
-              </div>
-            </div>
+  <div class="grid-con">
 
-            <div class="hotspot-card" data-index="5">
-              <i class="fa-solid fa-battery-full"></i>
-              <div class="card-content">
-                <h3>Power That Lasts</h3>
-                <p>Magnetic gold nodes charge fast and keep you connected through every beat.</p>
-              </div>
-            </div>
+    <!-- MODEL TEXT -->
+    <div class="col-span-full m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-5 model-text">
+      <h3 class="model-title">See the Beauty.<br>Touch the Detail.</h3>
+      <p class="model-subtitle">
+        Immerse yourself in a 360° exploration of <br>
+        Swan Symphony’s refined craftsmanship.
+      </p>
+    </div>
+
+    <!-- MODEL VIEWER + HOTSPOTS -->
+    <div class="col-span-full m-col-start-6 m-col-end-13 l-col-start-5 l-col-end-13 model-viewer-wrap">
+
+      <model-viewer
+        id="model"
+        src="model/Linh_Nguyen_Model Viewer Earbuds.gltf"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        camera-controls
+        tone-mapping="neutral"
+        poster="poster.webp"
+        shadow-intensity="1.33"
+        exposure="0.6"
+        shadow-softness="1"
+        disable-zoom
+        background-color="transparent"
+      >
+        <!-- Hotspot 1 -->
+        <button class="Hotspot"
+          slot="hotspot-1"
+          data-index="1"
+          data-position="-0.5575753113815958m 1.0161517884057922m -0.9951428595948597m"
+          data-normal="0.1879963803221925m -0.043268934919907756m -0.9812161638786076m"
+          data-visibility-attribute="visible">
+          <span class="HotspotAnnotation" id="hotspot-1"></span>
+        </button>
+
+        <!-- Hotspot 2 -->
+        <button class="Hotspot"
+          slot="hotspot-2"
+          data-index="2"
+          data-position="-0.42345212551579475m 1.1244540382541495m -1.5913624807454219m"
+          data-normal="-1.2246468525851679e-16m 0m -1m"
+          data-visibility-attribute="visible">
+          <span class="HotspotAnnotation" id="hotspot-2"></span>
+        </button>
+
+        <!-- Hotspot 3 -->
+        <button class="Hotspot"
+          slot="hotspot-3"
+          data-index="3"
+          data-position="-0.7417289706155215m 1.2122182979491893m -1.4998734975586314m"
+          data-normal="-0.8975809779003605m 0.44084962074547934m 0m"
+          data-visibility-attribute="visible">
+          <span class="HotspotAnnotation" id="hotspot-3"></span>
+        </button>
+
+        <!-- Hotspot 4 -->
+        <button class="Hotspot"
+          slot="hotspot-4"
+          data-index="4"
+          data-position="-0.30m 0.7769131379532437m -1.5484884871226732m"
+          data-normal="0.9762547903832386m -0.21662530846292055m 0.00024492268853269663m"
+          data-visibility-attribute="visible">
+          <span class="HotspotAnnotation" id="hotspot-4"></span>
+        </button>
+
+        <!-- Hotspot 5 -->
+        <button class="Hotspot"
+          slot="hotspot-5"
+          data-index="5"
+          data-position="-0.2808326519185689m 0.28m -1.444731822809986m"
+          data-normal="0.07260661522172351m -0.09097291073749751m 0.9932030048977861m"
+          data-visibility-attribute="visible">
+          <span class="HotspotAnnotation" id="hotspot-5"></span>
+        </button>
+
+      </model-viewer>
+
+      <!-- MOBILE HOTSPOT CARD LIST -->
+      <div class="hotspot-card-list">
+
+        <div class="hotspot-card" data-index="1">
+          <i class="fa-solid fa-ear-listen"></i>
+          <div class="card-content">
+            <h4>All-Day Comfort</h4>
+            <p>Soft ergonomic tips adapt to your ears — sealing in sound while reducing fatigue.</p>
           </div>
         </div>
+
+        <div class="hotspot-card" data-index="2">
+          <i class="fa-solid fa-feather-pointed"></i>
+          <div class="card-content">
+            <h4>Signature Grace</h4>
+            <p>The Swan emblem symbolizes balance, purity, and refined visual harmony.</p>
+          </div>
+        </div>
+
+        <div class="hotspot-card" data-index="3">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="card-content">
+            <h4>Instant Control</h4>
+            <p>Responsive touch gestures let you manage playback with precision and ease.</p>
+          </div>
+        </div>
+
+        <div class="hotspot-card" data-index="4">
+          <i class="fa-brands fa-bluetooth-b"></i>
+          <div class="card-content">
+            <h4>Pure Connection</h4>
+            <p>A refined antenna ring ensures stable Bluetooth connectivity at all times.</p>
+          </div>
+        </div>
+
+        <div class="hotspot-card" data-index="5">
+          <i class="fa-solid fa-battery-full"></i>
+          <div class="card-content">
+            <h4>Power That Lasts</h4>
+            <p>Magnetic gold nodes charge quickly and keep your earbuds ready for any moment.</p>
+          </div>
+        </div>
+
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- XRAY SECTION -->
-    <section id="xray" class="xray-section">
-      <div class="grid-con">
-        <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13 xray-text">
-          <h2 class="xray-title">Inside Harmony</h2>
-          <p class="xray-subtitle">Precision and beauty, revealed beneath the surface.</p>
-        </div>
+<section class="xray-section">
 
-        <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13 xray-frame">
-          <div class="xray-placeholder"></div>
+  <h2 class="hidden">X-Ray Comparison Section</h2>
+
+  <div class="grid-con">
+
+    <div class="col-span-full xray-text">
+      <h3 class="xray-title">Inside Harmony</h3>
+      <p class="xray-subtitle">
+        Precision and beauty, revealed beneath the surface.
+      </p>
+    </div>
+
+    <!-- X-Ray Slider -->
+    <div class="col-span-full">
+      <div class="xray-wrapper"> 
+        <div id="xray">
+          <div id="divisor"></div>
+          <input type="range" min="0" max="100" value="50" id="slider">
         </div>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- REFLECTION SECTION -->
-    <section id="reflection" class="reflection-section">
-      <div class="grid-con">
-        <div class="col-span-full m-col-span-full l-col-span-full reflection-text">
-          <h2 class="reflection-title">Find Your Reflection</h2>
-        </div>
+<section id="reflection" class="reflection-section">
 
-        <div class="col-span-full m-col-span-full l-col-span-full reflection-options">
-          <button class="color-btn active" data-color="pearl">
-            <span class="color-circle white"></span> Swan Pearl
-          </button>
-          <button class="color-btn" data-color="noir">
-            <span class="color-circle black"></span> Swan Noir
-          </button>
-        </div>
+  <h2 class="hidden">Reflection Color Selection Section</h2>
 
-        <div class="col-span-full m-col-span-full l-col-span-full reflection-content">
-          <div class="m-col-start-1 m-col-end-9 l-col-start-1 l-col-end-9 reflection-image">
-            <img id="earbudImage" src="images/swan_pearl.png" alt="Swan Pearl Earbuds">
-          </div>
+  <div class="grid-con">
 
-          <div class="m-col-start-9 m-col-end-12 l-col-start-9 l-col-end-12 reflection-description">
-            <p id="earbudText">
-              The embodiment of purity and calm.<br><br>
-              Inspired by the serene glow of a swan gliding on still waters,
-              Swan Pearl captures sophistication in its purest form.<br><br>
-              Its soft white tone reflects balance, clarity, and quiet confidence —
-              perfect for those who find power in simplicity.
-            </p>
-            <button class="buy-btn">Buy</button>
-          </div>
-        </div>
+    <div class="col-span-full m-col-span-full l-col-span-full reflection-text">
+      <h3 class="reflection-title">Find Your Reflection</h3>
+    </div>
+
+    <!-- Color options -->
+    <div class="col-span-full m-col-span-full l-col-span-full reflection-options">
+      <button class="color-btn active" data-color="pearl">
+        <span class="color-circle white"></span> Swan Pearl
+      </button>
+      <button class="color-btn" data-color="noir">
+        <span class="color-circle black"></span> Swan Noir
+      </button>
+    </div>
+
+    <!-- Reflection content -->
+    <div class="col-span-full m-col-span-full l-col-span-full reflection-content">
+
+      <!-- Earbud image -->
+      <div class="m-col-start-1 m-col-end-9 l-col-start-1 l-col-end-9 reflection-image">
+        <img id="earbudImage" src="images/swan_pearl.png" alt="Swan Pearl Earbuds">
       </div>
-    </section>
 
-    <!-- BENEFITS SECTION -->
-    <section id="benefits" class="benefits-section">
-      <h2 class="hidden">Benefits</h2>
-      <div class="grid-con">
-
-        <article class="col-span-full m-col-span-3 l-col-span-3 benefit-item">
-          <h3 class="hidden">Quick and Easy</h3>
-          <div class="benefit-card">
-            <i class="fa-solid fa-stopwatch"></i>
-            <p><strong>Quick and Easy</strong><br>Store Pickup</p>
-          </div>
-        </article>
-
-        <article class="col-span-full m-col-span-3 l-col-span-3 benefit-item">
-          <h3 class="hidden">Free Shipping</h3>
-          <div class="benefit-card">
-            <i class="fa-solid fa-truck"></i>
-            <p><strong>Free Shipping</strong><br>Over $35</p>
-          </div>
-        </article>
-
-        <article class="col-span-full m-col-span-3 l-col-span-3 benefit-item">
-          <h3 class="hidden">Low Price</h3>
-          <div class="benefit-card">
-            <i class="fa-solid fa-dollar-sign"></i>
-            <p><strong>Low Price</strong><br>Guarantee</p>
-          </div>
-        </article>
-
-        <article class="col-span-full m-col-span-3 l-col-span-3 benefit-item">
-          <h3 class="hidden">Latest Tech</h3>
-          <div class="benefit-card">
-            <i class="fa-solid fa-star"></i>
-            <p><strong>Latest and Greatest</strong><br>Tech</p>
-          </div>
-        </article>
-
+      <!-- Description -->
+      <div class="m-col-start-9 m-col-end-12 l-col-start-9 l-col-end-12 reflection-description">
+        <p id="earbudText">
+          The embodiment of purity and calm.<br><br>
+          Inspired by the serene glow of a swan gliding across still waters,
+          Swan Pearl radiates sophistication in its purest form.<br><br>
+          Its soft white tone reflects balance, clarity, and quiet confidence —
+          perfect for those who find beauty in simplicity.
+        </p>
+        <button class="buy-btn">Buy</button>
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer-section">
-    <div class="grid-con">
-      <div class="col-span-full m-col-span-full l-col-span-full footer-logo">
+<footer class="footer-section">
+
+  <h2 class="hidden">Website Footer</h2>
+
+  <div class="grid-con">
+
+    <!-- Logo -->
+    <div class="col-span-full m-col-span-full l-col-span-full footer-logo">
+      <a href="index.html">
         <img src="images/swan_text_logo.svg" alt="Swan Logo">
-      </div>
-
-      <hr class="footer-divider col-span-full m-col-span-full l-col-span-full">
-
-      <div class="col-span-2 m-col-span-3 l-col-span-3 footer-col">
-        <h3>Quick Navigation</h3>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#support">Support</a></li>
-          <li><a href="#store">Store</a></li>
-        </ul>
-      </div>
-
-      <div class="col-span-2 m-col-span-3 l-col-span-3 footer-col">
-        <h3>About Swan</h3>
-        <ul>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Design Philosophy</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press Kit</a></li>
-        </ul>
-      </div>
-
-      <div class="col-span-2 m-col-span-3 l-col-span-3 footer-col">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Warranty</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#">User Manual</a></li>
-        </ul>
-      </div>
-
-      <div class="col-span-2 m-col-span-3 l-col-span-3 footer-col">
-        <h3>Follow Us</h3>
-        <ul class="social-links">
-          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-          <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
-          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-          <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a></li>
-        </ul>
-      </div>
-
-      <div class="col-span-full footer-bottom">
-        <p>© 2025 Swan Earbuds. All Rights Reserved.<br>Made by <strong>Linh Nguyen</strong></p>
-      </div>
+      </a>
     </div>
-  </footer>
+
+    <hr class="footer-divider col-span-full m-col-span-full l-col-span-full">
+
+    <!-- Column 1 -->
+    <nav class="col-span-2 m-col-span-3 l-col-span-3 footer-col" aria-label="Quick Navigation">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+    </nav>
+
+    <!-- Column 2 -->
+    <nav class="col-span-2 m-col-span-3 l-col-span-3 footer-col" aria-label="About Swan">
+      <h3>About Swan</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Design Philosophy</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </nav>
+
+    <!-- Column 3 -->
+    <nav class="col-span-2 m-col-span-3 l-col-span-3 footer-col" aria-label="Support">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Warranty</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">User Manual</a></li>
+      </ul>
+    </nav>
+
+    <!-- Column 4 -->
+    <nav class="col-span-2 m-col-span-3 l-col-span-3 footer-col" aria-label="Social Media Links">
+      <h3>Follow Us</h3>
+      <ul class="social-links">
+        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+        <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a></li>
+      </ul>
+    </nav>
+
+    <!-- Bottom -->
+    <div class="col-span-full footer-bottom">
+      <p>
+        © 2025 Swan Earbuds. All Rights Reserved.<br>
+        Made by <strong>Linh Nguyen</strong>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
 
   <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="js/main.js"></script>
 </body>
