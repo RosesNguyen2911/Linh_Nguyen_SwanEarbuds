@@ -1,8 +1,6 @@
 @use "../abstracts" as *;
 
-/* =========================
-   XRAY SECTION
-========================= */
+// Section Wrapper
 .xray-section {
   background: $color-white;
   color: $color-purple-dark;
@@ -14,63 +12,117 @@
     margin-bottom: 2rem;
 
     .xray-title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
     .xray-subtitle {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: rgba($color-purple-dark, 0.8);
     }
   }
 
-  .xray-frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .xray-placeholder {
-      width: 90%;
-      max-width: 800px;
-      height: 400px;
-      border: 1px solid rgba($color-purple-dark, 0.4);
-      border-radius: 4px;
-      background: transparent;
-    }
+  .xray-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 
-/* =========================
-   RESPONSIVE CONTROL
-========================= */
+// X-Ray Container
+#xray {
+  position: relative;
+  aspect-ratio: 16/10;
+  background-image: url("../images/Nguyen_L_EarbudsRender.jpg");
+  background-size: cover;
+  border-radius: 15px;
+  border: 3px solid $color-purple-dark;
+  overflow: hidden;
+}
 
-/* Tablet (>=768px) */
+// Reveal Layer
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 16/10;
+  background-image: url("../images/Nguyen_L_X-Ray.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 110%;
+    background-color: $color-white;
+    border: 2.5px solid $color-purple-dark;
+  }
+}
+
+// Slider Track
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 20px);
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 0;
+  background: transparent;
+}
+
+// Slider Thumb
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: $color-white url("../images/right_left_icon.svg") center/60% no-repeat;
+  border-radius: 50%;
+  border: 2px solid $color-purple-dark;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(87, 58, 76, 0.3);
+}
+
+// Tablet
 @media (min-width: 768px) {
-  .xray-section {
-    .xray-text {
-      text-align: center;
-      .xray-title {
-        font-size: 2.4rem;
-      }
-      .xray-subtitle {
-        font-size: 1.1rem;
-      }
-    }
+  #divisor::after {
+    width: 10px;
+    border-width: 3px;
+  }
 
-    .xray-placeholder {
-      height: 450px;
-      max-width: 900px;
-    }
+  input[type=range]::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    background-size: 70%;
   }
 }
 
-/* Desktop (>=1200px) */
+// Desktop
 @media (min-width: 1200px) {
-  .xray-section {
-    .xray-placeholder {
-      height: 500px;
-      max-width: 1000px;
-    }
+  #divisor::after {
+    width: 12px;
+    border-width: 4px;
+  }
+}
+
+/* Mobile: disable slider */
+@media (max-width: 767px) {
+  #slider {
+    pointer-events: none;   
+    opacity: 0;             
+  }
+
+  #divisor {
+    width: 50% !important;  
   }
 }

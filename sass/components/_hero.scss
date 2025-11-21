@@ -5,15 +5,17 @@
   background: $color-gradient;
   color: $color-white;
   text-align: center;
-  padding: 150px 20px 40px;
+  padding: 100px 20px 40px;
   height: 800px;
 
-  h1 {
-    font-size: 2.8rem;
+  /* Select styling by class instead of h1/h2 */
+  .hero-title {
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
     white-space: normal;
+    display: block;
   }
 
   p {
@@ -40,7 +42,7 @@
     gap: 30px;
 
     .btn {
-      background: #3b82f6; // same blue tone as reflection section
+      background: #3b82f6;
       color: $color-white;
       border: none;
       border-radius: 40px;
@@ -53,7 +55,7 @@
       box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 
       &:hover {
-        background: #2563eb; // deeper blue on hover
+        background: #2563eb;
         box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
         transform: translateY(-2px);
       }
@@ -73,7 +75,7 @@
     padding: 160px 60px 50px;
     height: 620px;
 
-    h1 {
+    .hero-title {
       font-size: 3.3rem;
       margin-top: 40px;
       display: inline-block;
@@ -105,7 +107,7 @@
     padding: 120px 100px;
     height: 720px;
 
-    h1 {
+    .hero-title {
       font-size: 4rem;
       margin-top: 80px;
     }
