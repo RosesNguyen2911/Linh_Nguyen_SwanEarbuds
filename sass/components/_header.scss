@@ -4,7 +4,6 @@
 #header {
   background-color: $color-black;
   color: $color-white;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -99,8 +98,8 @@
           }
         }
 
-        /* Mobile Icons */
         &.mobile-icons {
+          /* Mobile Icons */
           display: flex;
           justify-content: center;
           gap: 25px;

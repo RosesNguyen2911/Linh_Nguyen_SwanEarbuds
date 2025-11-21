@@ -72,7 +72,7 @@
         width: 100%;
         max-width: 480px;
         border-radius: 8px;
-        border: 1px solid $color-purple-dark;
+        border: 1.5px solid $color-purple-dark;
         background: #dcdcdc;
         margin: 0 auto;
       }
@@ -170,11 +170,6 @@
   /* ===== Desktop ≥1200px ===== */
   @media (min-width: 1200px) {
     padding: 100px 0;
-
-    .reflection-title {
-      font-size: 2.8rem;
-      margin-bottom: 2rem;
-    }
 
     .reflection-content {
       gap: 5rem;
